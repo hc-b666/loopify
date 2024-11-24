@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loopify</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+      input {
+        margin: 10px 0;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Loopify</h1>
+    <input type="file" id="musicInput" accept="audio/*" />
+    <button id="playPauseBtn">Play</button>
+    <div style="margin-top: 10px">
+      <span id="currentTime">00:00</span> / <span id="duration">00:00</span>
+    </div>
+    <input
+      type="range"
+      id="progressBar"
+      value="0"
+      max="100"
+      style="width: 80%; margin-top: 10px"
+    />
+    <audio id="audioPlayer" loop></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
