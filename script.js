@@ -1,11 +1,17 @@
+"use strict";
+
 const musicInput = document.getElementById("musicInput");
 const playPauseBtn = document.getElementById("playPauseBtn");
 const audioPlayer = document.getElementById("audioPlayer");
 const currentTimeDisplay = document.getElementById("currentTime");
 const durationDisplay = document.getElementById("duration");
 const progressBar = document.getElementById("progressBar");
+const volumeControl = document.getElementById("volumeControl");
+const volumeDisplay = document.getElementById("volumeDisplay");
 
 let isPlaying = false;
+audioPlayer.volume = volumeControl.value;
+volumeDisplay.textContent = `${Math.round(volumeControl.value * 100)}%`;
 
 const formatTime = (seconds) => {
   const mins = Math.floor(seconds / 60);
@@ -50,4 +56,10 @@ audioPlayer.addEventListener("timeupdate", () => {
 
 progressBar.addEventListener("input", (event) => {
   audioPlayer.currentTime = event.target.value;
+});
+
+volumeControl.addEventListener("input", (e) => {
+  const volume = e.target.value;
+  audioPlayer.volume = volume;
+  volumeDisplay.textContent = `${Math.round(volume * 100)}%`;
 });
