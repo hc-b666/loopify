@@ -61,5 +61,5 @@ progressBar.addEventListener("input", (event) => {
 volumeControl.addEventListener("input", (e) => {
   const volume = e.target.value;
   audioPlayer.volume = volume;
-  volumeDisplay.textContent = `${Math.round(volume * 100)}%`;
+  volumeDisplay.textContent = `[${Math.round(volume * 100)}%]`;
 });

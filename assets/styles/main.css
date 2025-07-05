@@ -1,0 +1,47 @@
+@import url("./fonts.css");
+
+:root {
+  --primary-bg: #1a1b26;
+
+  --green: #00ffbf;
+  --red: #f7768e;
+  --red-transparent: rgba(247, 118, 142, 0.2);
+  --purple: #7f00ff;
+  --blue: #7aa2f7;
+
+  --primary-txt: #c0caf5;
+  --secondary-txt: #a9b1d6;
+}
+
+* {
+  color: var(--primary-txt);
+
+  font-family: "JetBrainsMonoNerdFont";
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--primary-bg);
+
+  overscroll-behavior: none;
+}
+
+input {
+  margin: 10px 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+p {
+  font-size: 14px;
+}
+
+svg {
+  stroke: var(--blue);
+}
